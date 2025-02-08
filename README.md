@@ -22,3 +22,21 @@ Install Poppler for PDF Processing
 2. Add the bin folder to your system PATH.
 3. Update the script with the correct poppler_path:
    convert_from_path(file_path, poppler_path=r'D:\Downloads\Release-24.08.0-0\poppler-24.08.0\Library\bin')
+
+Database Setup
+Ensure you have a PostgreSQL database running. Update the database connection settings in the script.
+
+SQL Schema
+Run the following SQL commands to set up the database tables:
+1. CREATE TABLE patients (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    dob DATE
+);
+
+2. CREATE TABLE forms_data (
+    id SERIAL PRIMARY KEY,
+    patient_id INT REFERENCES patients(id),
+    form_json JSONB,
+    created_at TIMESTAMP DEFAULT NOW()
+);
