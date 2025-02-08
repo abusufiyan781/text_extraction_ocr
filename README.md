@@ -7,10 +7,10 @@ Ensure you have Python 3.x installed on your system.
 
 Install Required Modules
 Run the following commands to install the necessary Python packages:
-pip install opencv-python  # Open-CV for image processing
-pip install pytesseract    # OCR processing
-pip install psycopg2       # PostgreSQL database integration
-pip install pdf2image      # Convert PDFs to images
+1. pip install opencv-python  # Open-CV for image processing
+2. pip install pytesseract    # OCR processing
+3. pip install psycopg2       # PostgreSQL database integration
+4. pip install pdf2image      # Convert PDFs to images
 
 Install and Configure Tesseract OCR
 1. Download and install Tesseract OCR.
